@@ -1,0 +1,450 @@
+%------------------------------------------------------------------------------
+% CV in Latex
+% Author : Max Fleming
+% Template draws heavily from: Charles's https://github.com/fizixmastr/CV-Resume
+% Most recently updated version may be found at https://github.com/ TODO
+% License : MIT
+%------------------------------------------------------------------------------
+
+\documentclass[A4,11pt]{article}
+%\documentclass[letterpaper,11pt]{article} %For use in US
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{tikz}
+\input{glyphtounicode}
+
+
+
+%-----FONT OPTIONS-------------------------------------------------------------
+
+
+% serif
+ \usepackage{palatino}
+% \usepackage{times} %This is the default as well
+% \usepackage{charter}
+
+% sans-serif
+% \usepackage{helvet}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+%-----PAGE SETUP---------------------------------------------------------------
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-1cm}
+\addtolength{\evensidemargin}{-1cm}
+\addtolength{\textwidth}{2cm}
+\addtolength{\topmargin}{-1cm}
+\addtolength{\textheight}{2cm}
+
+% Margins for US Letter size
+%\addtolength{\oddsidemargin}{-0.5in}
+%\addtolength{\evensidemargin}{-0.5in}
+%\addtolength{\textwidth}{1in}
+%\addtolength{\topmargin}{-.5in}
+%\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0cm}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that .pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-----CUSTOM COMMANDS FOR FORMATTING SECTIONS----------------------------------
+\newcommand{\CVItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\CVSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \small#3 & \small #4 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+
+\newcommand{\CVSubSubheading}[2]{
+    \item
+    \begin{tabularx}{0.9\textwidth}{L r}
+      \small{#1} & \small{#2} \\
+    \end{tabularx}\vspace{-7pt}
+}
+
+\newcommand{\CVSubItem}[1]{\CVItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\CVSubHeadingListStart}{\begin{itemize}[leftmargin=0.5cm, label={}]}
+% \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]} % Uncomment for US
+\newcommand{\CVSubHeadingListEnd}{\end{itemize}}
+\newcommand{\CVItemListStart}{\begin{itemize}}
+\newcommand{\CVItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%------------------------------------------------------------------------------
+% CV STARTS HERE  %
+%------------------------------------------------------------------------------
+\begin{document}
+
+%-----HEADING------------------------------------------------------------------
+\begin{comment}
+In Europe it is common to include a picture of ones self in the CV. Select
+which heading appropriate for the document you are creating.
+\end{comment}
+
+\begin{minipage}[c]{0.05\textwidth}
+\-\
+\end{minipage}
+\begin{minipage}[c]{0.25\textwidth}
+\begin{tikzpicture}
+    \clip (0,0) circle (1.75cm);
+    \node at (-.1,-.2) {\includegraphics[width = 5cm]{portrait.png}};
+    % if necessary the picture may be moved by changing the at (coordinates)
+    % width defines the 'zoom' of the picture
+\end{tikzpicture}
+\hfill\vline\hfill
+\end{minipage}
+\hspace{1cm}
+\begin{minipage}[c]{0.5\textwidth}
+    \textbf{\Huge \scshape{Max Fleming}} \vspace{5pt} \\
+    % \scshape sets small capital letters, remove if desired
+    \small{+61 432 539 931} \vspace{3pt} \\
+	\href{mailto:max.fleming@anu.edu.au}{\underline{\smash{max.fleming@anu.edu.au}}}
+	$|$
+    \href{mailto:max@maxfleming.xyz}{\underline{\smash{max@maxfleming.xyz}}} \vspace{3pt} \\
+    % Be sure to use a professional *personal* email address
+    \href{https://maxfleming.xyz/}{\underline{\smash{{maxfleming.xyz}}}}
+	$|$
+    \href{https://linktr.ee/maxfleming}{\underline{\smash{{linktr.ee/maxfleming}}}} \\
+    \href{https://www.linkedin.com/in/maxfleming23/}{\underline{\smash{{linkedin.com/in/maxfleming23/}}}} \\
+    % you should adjust you linked in profile name to be professional and recognizable
+    \href{https://github.com/MaxFleming23}{\underline{\smash{{github.com/MaxFleming23}}}}
+\end{minipage}
+
+% Without picture
+%\begin{center}
+%    \textbf{\Huge \scshape Charles Rambo} \\ \vspace{1pt} %\scshape sets small capital letters, remove if desired
+%    \small +1 123-456-7890 $|$
+%    \href{mailto:you@provider.com}{\underline{you@provider.com}} $|$\\
+%    % Be sure to use a professional *personal* email address
+%    \href{https://linkedin.com/in/your-name-here}{\underline{linkedin.com/in/charles-rambo}} $|$
+%    % you should adjust you linked in profile name to be professional and recognizable
+%    \href{https://github.com/fizixmastr}{\underline{github.com/fizixmastr}}
+%\end{center}
+
+
+
+\begin{comment}
+This CV was written for specifically for positions I was applying for in
+academia, and then modified to be a template.
+
+A standard CV is about two pages long where as a resume in the US is one page.
+sections can be added and removed here with this in mind. In my experience,
+education, and applicable work experience and skills are the most import things
+to include on a resume. For a CV the Europass CV suggests the categories: Work
+Experience, Education and Training, Language Skills, Digital Skills,
+Communication and Interpersonal Skills, Conferences and Seminars, Creative Works
+Driver's License, Hobbies and Interests, Honors and Awards, Management and
+Leadership Skills, Networks and Memberships, Organizational Skills, Projects,
+Publications, Recommendations, Social and Political Activities, Volunteering.
+
+Your goal is to convey a who, what , when, where, why for every item you share.
+The who is obviously you, but I believe the rest should be done in that order.
+For example below. An employer cares most about the degree held and typically
+less about the institution or where it is located (This is still good
+information though). Whatever order you choose be consistent throughout.
+\end{comment}
+
+%-----EDUCATION----------------------------------------------------------------
+\section{Education}
+  \CVSubHeadingListStart
+%    \CVSubheading % Example
+%      {Degree Achieved}{Years of Study}
+%      {Institution of Study}{Where it is located}
+    \CVSubheading
+    {{Bachelor of Philosophy (Honours) - Science $|$ \emph{\small{Majors: Physics, Math}}}}{2022 -- 2025}
+    {Australian National University}{Canberra, ACT}
+    \CVItemListStart
+    \CVItem{\textbf{GPA: 6.903/7.0} $|$ {First Class Honours (H1)} $|$ Thesis mark: \textbf{97\%}}
+    \CVItem{Dunbar Physics Honours Scholarship (Academic Merit)}
+    \CVItem{ANU All-Rounder Scholarship (Tuckwell Finalist)}
+    \CVItem{Bruce Hall Outstanding Achievement Award for attaining 100\% in Problem-Solving and Proofs }
+    \CVItem{Dean’s Science Education Commendation for Semester 1, 2022}
+    %\CVItem{Consistent HD obtainment (26/28 HDs)}
+    \CVItemListEnd
+    \CVSubheading
+        {Western Australian Certificate of Education (WACE)}{2007 -- 2021}
+        {Great Southern Grammar (K-12)}{Albany, Western Australia}
+        \CVItemListStart
+	\CVItem{\textbf{ATAR 99.85} $|$ {Dux of the Class of 2021} $|$ Audrey Jackson Medal}
+        \CVItem{Top score in ATAR Physics, Specialist Maths, Maths Methods, Chemistry }
+        \CVItem{Australian Defence Force Future Innovators Award, 2021 $|$ Full Colours Music, 2020 }
+        \CVItem{Duke of Edinburgh Bronze Medallion, 2018 $|$ Outward Bound expedition leadership award, 2018 }
+	\CVItem{Mental Health First Aid, 2018 $|$ UWA Brain Bee, 2018}
+        \CVItem{da Vinci Decathlon 2019, 2017; won WA engineering division in 2017 }
+        \CVItemListEnd
+  \CVSubHeadingListEnd
+
+%-----WORK EXPERIENCE----------------------------------------------------------
+\begin{comment}
+try to briefly explain what you did and why it is relevant to the position you
+are seeking
+\end{comment}
+
+\section{Employment / Work Experience}
+  \CVSubHeadingListStart
+  \CVSubheading
+  {University Tutor, Teaching Assistant \& Laboratory Demonstrator}{2026 -- Current}
+  {Australian National University}{Canberra, ACT}
+  \CVItemListStart
+    \CVItem{Sole TA for Quantum Field Theory II (PHYS8302)}
+    \CVItem{Tutor for physics classes (PHYS1101)}
+    \CVItem{Laboratory Demonstrator for first year labs}
+  \CVItemListEnd
+
+
+  \CVSubheading
+  {ATAR Tutoring}{2022 -- 2025}
+  {Tutoring multiple years 11 and 12 students}{Online}
+  \CVItemListStart
+    \CVItem{Developed personalised lessons across Math, Physics and Chemistry ATAR/WACE syllabus requirements}
+    \CVItem{Utilised online tools and platforms, collaborating with students on time management and study techniques for academic performance and exam preparation}
+  \CVItemListEnd
+
+
+  \CVSubheading
+    {Siding Springs Observatory Summer Internship}{Jan -- Feb 2024}
+    {Technical Intern}{Siding Springs, NSW}
+    \CVItemListStart
+      \CVItem{Designed and implemented an image process pipeline to facilitate automated estimation of seeing}
+    \CVItemListEnd
+
+  \CVSubheading
+    {Real Estate Database Monitoring Software Service}{2023 -- Current}
+    {Independent Software Contractor}{Online}
+    \CVItemListStart
+      \CVItem{Developed and maintaining custom realtime monitoring software. }
+    \CVItemListEnd
+
+    \CVSubheading
+      {Cooperative Bulk Handling}{Nov 2022 -- Jan 2023}
+      {Grain Handling Specialist}{Kojaneerup, WA}
+      \CVItemListStart
+      \CVItem{Coordinated grain storage and transport; maintained conveyors \& augers; upheld QA and OSHE protocols}
+      \CVItemListEnd
+
+    \CVSubheading
+      {Retirement Village Handyman / Groundskeeper}{Nov 2021 -- Feb 2022}
+      {Outlook Lifestyle Village (Serenitas)}{Albany, WA}
+      \CVItemListStart
+            \CVItem{Upkeep: gardens, pools, waste. Operated various tools to build: sheds, fencing, paths, stormwater pipes}
+      \CVItemListEnd
+
+      \pagebreak
+
+    \CVSubheading
+      {Great Southern Radiology }{July 2019}
+      {School based work experience}{Albany Regional Hospital, WA}
+      \CVItemListStart
+        \CVItem{Shadowed MRI, CT, X‑ray and ultrasound procedures, adhering to serivce, radiation \& privacy protocols}
+	%\CVItem{Supported equipment prep }
+        %\CVItem{Assisted in MRI, CT, X-ray and ultrasound scans on patients of various ages, abilities and backgrounds}
+        %\CVItem{Worked in a professional environment with radiology staff and other hospital departments}
+        %\CVItem{Provided customer service and assisted in maintaining equipment}
+        %\CVItem{Exercised all safety and privacy protocols while dealing with radiation, diseases and clients}
+      \CVItemListEnd
+
+    \CVSubheading
+      {University of Melbourne Department of Physics (Particle Physics)}{June 2019}
+      {Research experience}{Melbourne, VIC}
+      \CVItemListStart
+        \CVItem{Participated in lectures, demonstrations and experiments, presenting findings in small teams}
+        %\CVItem{Gained exposure to the research environment of a university physics department}
+        %\CVItem{Conducted small team experiments and presented findings}
+      \CVItemListEnd
+  \CVSubHeadingListEnd
+
+
+%-----PROJECTS AND RESEARCH----------------------------------------------------
+\begin{comment}
+Ideally the title of the work should speak for what it is. However if you feel
+like you should explain more about why the project is applicable to this job,
+use item list as is shown in the work experience section.
+\end{comment}
+
+\section{Projects and Research}
+  \CVSubHeadingListStart
+%    \CVSubheading
+%      {Title of Work}{When it was done}
+%      {Institution you worked with}{unused}
+    \CVSubheading
+    {{Honours: Non-Perturbative Spinor Tunnelling in Interacting Quantum Fields} }{Feb -- Oct 2025}
+      {Thesis grade \textbf{97\%}, obtaining first class honours}{ANU}
+      %\CVItemListStart
+	%\CVItem
+	%involving literature review, theoretical exposition, derivations and numerical modelling.}
+        %\CVItem{Conducted small team experiments and presented findings}
+      %\CVItemListEnd
+
+\vspace{2pt}
+  \textbf{Undergraduate Research at ANU}
+\vspace{-5pt}
+  \CVItemListStart
+    \CVItem{\textbf{Nuclear Magnetism: Magnetic Moment Measurements in Iron-55} \hfill Jul -- Nov 2024}
+    \CVItem{\textbf{Optical quantum memory: Investigating the Gradient Echo Memory Technique} \hfill Feb -- Jun 2024}
+    \CVItem{\textbf{Nuclear Structure of Neutron-Rich 152Nd through Gamma-Ray Spectroscopy} \hfill Jul -- Nov 2022}
+  \CVItemListEnd
+
+
+  \CVSubHeadingListEnd
+
+%-----CONFERENCES AND PRESENTATIONS--------------------------------------------
+\begin{comment}
+Again the title should have already been enough, but if it is necessary to add
+descriptions maintain the consistency from prior sections
+\end{comment}
+
+
+\section{Conferences and Workshops}
+  \CVItemListStart
+      \CVItem{\textbf{Centre for Dark Matter Particle Physics (CDMPP) Theory Workshop (Canberra, ACT)} \hfill February 2026}
+      \CVItem{\textbf{Nuclear and Particle Physics (NUPP) Postgraduate Summer School (Sydney, NSW)} \hfill January 2026}
+      \CVItem{\textbf{Australian Institute of Physics (AIP) Summer Meeting (Wollongong, NSW)} \hfill December 2025}
+      \CVItem{\textbf{Centre for Dark Matter Particle Physics (CDMPP) Annual Workshop (Canberra, ACT)} \hfill November 2025}
+  \CVItemListEnd
+
+
+%-----HONORS AND AWARDS--------------------------------------------------------
+\begin{comment}
+\section{Honors and Awards}
+  \CVSubHeadingListStart
+%    \CVSubheading %Example
+%      {What}{When}
+%      {Short Description}{}
+    \CVSubheading
+      {Dean's List}{Fall 2017}
+      {Recognition for to 20\% of students in academics at Austin College}{}
+    \CVSubheading
+      {Noyce STEM Education Leadership Scholarship}{June 2017}
+      {Merit based grant for students pursuing education in STEM fields}{}
+    \CVSubheading
+      {Stephens Scholarship}{May 2017}
+      {Merit based scholarship to support international study experiences within Austin College}{}
+    \CVSubheading
+      {John D . Mosely Scholarship}{July 2016}
+      {Merit based scholarship requiring Austin College alumnus nomination}{}
+    \CVSubheading
+      {Presidents List}{Spring 2016}
+      {Overall GPA above 3.8 at Austin College}{}
+    \CVSubheading
+      {Eagle Scout}{April 2006}
+      {Highest level of achievement within the Boy Scouts of America}{}
+  \CVSubHeadingListEnd
+
+\end{comment}
+
+%-----TEACHING EXPERIENCE------------------------------------------------------
+\begin{comment}
+Section is here as it applied to my application for positions in academia.
+Remember to tailor the resume for to the position.
+
+
+\section{Teaching Experience}
+  \CVSubHeadingListStart
+%    \CVSubheading
+%      {What}{When}
+%      {School}{Where}
+    \CVSubheading
+      {High School Physics (11 Weeks Teaching/Observing)}{Fall 2017}
+      {Denison High School}{Denison, TX}
+    \CVSubheading
+      {High School Calculus (11 Weeks Teaching/Observing)}{Fall 2017}
+      {Denison High School}{Denison, TX}
+    \CVSubheading
+      {High School Geometry (9 Weeks Teaching/Observing)}{Spring 2016}
+      {Sherman High School}{Sherman, TX}
+  \CVSubHeadingListEnd
+
+\end{comment}
+
+%-----COMMUNITY INVOLVEMENT----------------------------------------------------
+\section{Community Involvement}
+  \CVSubHeadingListStart
+
+    \CVSubheading
+      {Maison Fencing Club}{January 2026 -- Current}
+      {Beginner student of Epee}{Canberra, ACT}
+
+    \CVSubheading
+      {Pipe Band Community Service Performances}{2016 -- Current}
+      {Canberra City Pipes \& Drums (Current), Burns Club Pipe Band (2024), GSG Pipe Band (2021)}{}
+    \CVItemListStart
+      \CVItem{Band March in Bruce Hall's Big Night In 2024 \& 2025}
+      \CVItem{Solo piper for Police Remembrance Day and ANZAC wreath laying services. Participated in ANZAC parades, Albany Ag Show, Vietnam Veterans parade and Centenary of Armistice marches}
+      \CVItem{Performed at  UWA 20th Anniversary in 2019 and prepared for 2020 nationals (postponed due to Covid)}
+    \CVItemListEnd
+    \CVSubheading
+      {ANU Physics Society}{2022 -- 2025}
+      {Organised regular academic and social events for physics students and enthusiasts}{Canberra, ACT}
+    \CVSubheading
+      {ANU Rocketry}{Feb -- Oct 2024}
+      {Prepared for intervarsity competitions with 10,000ft and 30,000ft rocket entries}{Canberra, ACT}
+    \CVSubheading
+      {Taekwondo Second Dan Belt}{2013 -- 2021}
+      {Adjudicated black belt exams; mentored children and adults $|$ Student of the Year 2016, 2018}{Dragon Martial Arts}
+
+    \CVSubheading
+      {Camfield House Captain}{2021}
+      {Senior School Leadership Team: mentoring, public speaking and leading events and activities}{Albany, WA}
+% \CVItemListStart
+        % \CVItem{Enhanced skills in public speaking, decision-making and mentoring}
+        % \CVItem{Led house teams in Swimming, Cross Country and Athletics carnivals}
+        % \CVItem{Offered guidance to junior students through playtime and mentoring sessions}
+      % \CVItemListEnd
+
+    \CVSubheading
+      {Volunteer - Bruce Munro's Field of Light Art Installation}{Sept -- Nov 2018}
+      {Collaborated with artist on installation of fibre-bulb optic network, provided guest services}{Mt Clarence}
+
+  \CVSubHeadingListEnd
+
+
+%-----SKILLS-------------------------------------------------------------------
+\begin{comment}
+This section is compressed from the various skills sections that Euro CV
+recommends.
+\end{comment}
+
+\section{Skills}
+\begin{itemize}[leftmargin=0.5cm, label={}]
+   \small{\item{
+      \textbf{Programming}{: Python (NumPy, SciPy, Matplotlib, Pandas), MATLAB, Mathematica and some experience with C++, Haskell and others} \\
+      \textbf{Operating Systems}{: proficient in Linux with daily use of Arch Linux} \\
+      \textbf{Document Creation}{: LaTeX, Markdown, roff, Microsoft Office, LibreOffice suite} \\
+      \textbf{Web Development}{: design and maintenance of a personal web server and website (maxfleming.xyz)} \\
+      \textbf{Mechanical and Electrical}{: lab electronics, laser-operations, hobbiest automotive, power tools, 3D printing, etc.} \\
+   }}
+\end{itemize}
+
+
+%------------------------------------------------------------------------------
+\end{document}

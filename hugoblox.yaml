@@ -2,7 +2,9 @@ build:
   hugo_version: '0.162.0'
 deploy:
   # Deployment target: github-pages, netlify, vercel, cloudflare, or none
-  host: 'github-pages'
+  # Self-hosted: built & published to nginx (/var/www/maxfleming) by the server's
+  # pull+build cron — see /home/mf/deploy-maxfleming.sh on the box.
+  host: 'none'
 template:
   id: "academic-cv"
   name: "Academic CV"

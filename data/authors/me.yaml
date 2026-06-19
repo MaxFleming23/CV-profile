@@ -2,115 +2,108 @@ schema: hugoblox/author/v1
 slug: me
 is_owner: true
 name:
-  display: Dr. Alex Johnson
-  given: Alex
-  family: Johnson
-  alternate: ''  # Example: 王伟
-  pronunciation: ''  # Example: Wáng Wěi
+  display: Max Fleming
+  given: Max
+  family: Fleming
+  alternate: ''
+  pronunciation: ''
   pronouns: he/him
-postnominals:
-  - PhD
-  - MIEEE
 status:
-  icon: "☕️"
-role: Senior AI Research Scientist
+  icon: "⚛️"
+role: Physics & Mathematics — BPhil (Hons), ANU
 bio: |
-  Alex Johnson is a Senior AI Research Scientist at Meta AI. His research
-  has been published in top conferences like NeurIPS and ICML, with over
-  10,000 citations. Alex is passionate about pushing the boundaries of AI
-  while ensuring ethical development.
+  Max Fleming is a physics and mathematics graduate of the Australian National
+  University, where he completed first-class Honours with a thesis on
+  non-perturbative spinor tunnelling in interacting quantum fields (graded 97%).
+  His interests span quantum field theory, nuclear and particle physics, and
+  quantum optics. He currently tutors and demonstrates across the ANU Research
+  School of Physics, including as sole teaching assistant for Quantum Field
+  Theory II.
 
 affiliations:
-  - name: Meta AI
-    url: https://ai.meta.com/
+  - name: Australian National University
+    url: https://www.anu.edu.au/
 
 links:
   - icon: at-symbol
-    url: mailto:alex.johnson@example.com
+    url: mailto:max@maxfleming.xyz
     label: E-mail Me
-  - icon: brands/x
-    url: https://x.com/example
   - icon: brands/github
-    url: https://github.com/example
+    url: https://github.com/MaxFleming23
   - icon: brands/linkedin
-    url: https://www.linkedin.com/in/example/
-  - icon: academicons/google-scholar
-    url: https://scholar.google.com/citations?user=example
-  - icon: academicons/orcid
-    url: https://orcid.org/0000-0002-1825-0097
+    url: https://www.linkedin.com/in/maxfleming23/
+  - icon: link
+    url: https://linktr.ee/maxfleming
+    label: Linktree
 
 interests:
-  - Large Language Models
-  - Computer Vision
-  - Reinforcement Learning
-  - AI Ethics
+  - Quantum Field Theory
+  - Nuclear & Particle Physics
+  - Quantum Memory & Optics
+  - Computational Physics
 
 education:
-  - degree: PhD Computer Science
-    institution: Stanford University
-    start: 2015-09-01
-    end: 2019-06-30
+  - degree: BPhil (Hons), Science — Physics & Mathematics
+    institution: Australian National University
+    year: 2022 – 2025
     summary: |
-      Thesis on scaling laws for neural language models. Published 5 papers in NeurIPS and ICML.
-    button:
-      text: Download dissertation
-      url: /resume.pdf
-      icon: hero/arrow-down-tray
-  - degree: MS Computer Science
-    institution: Carnegie Mellon University
-    start: 2013-09-01
-    end: 2015-05-31
-  - degree: BS Computer Science
-    institution: MIT
-    start: 2009-09-01
-    end: 2013-05-31
+      First Class Honours (H1). GPA 6.903/7.0; thesis graded 97%. Dunbar Physics
+      Honours Scholarship and ANU All-Rounder Scholarship (Tuckwell Finalist).
 
 experience:
-  - role: Senior AI Research Scientist
-    org: Meta AI
-    start: 2020-01-01
+  - role: Tutor, Teaching Assistant & Laboratory Demonstrator
+    org: Australian National University
+    start: 2026-01-01
     summary: |
-      Leading research on multimodal AI systems. Contributed to Llama 2 and other open-source models.
-    button:
-      text: View portfolio
-      url: /
-      icon: hero/arrow-down-tray
-  - role: AI Research Intern
-    org: OpenAI
-    start: 2019-06-01
-    end: 2019-12-31
+      Sole teaching assistant for Quantum Field Theory II (PHYS8302); tutor for
+      first-year physics (PHYS1101); laboratory demonstrator for first-year labs.
+  - role: Technical Intern (Summer Internship)
+    org: Siding Spring Observatory
+    start: 2024-01-01
+    end: 2024-02-29
     summary: |
-      Worked on GPT-3 scaling. Co-authored paper on prompt engineering.
+      Designed and implemented an image-processing pipeline for automated
+      estimation of astronomical seeing.
+  - role: Independent Software Contractor
+    org: Real-estate database monitoring service
+    start: 2023-01-01
+    summary: |
+      Built and maintain custom real-time monitoring software for a real-estate
+      data service.
 
 skills:
-  - name: Technical Skills
+  - name: Programming & Computation
     items:
-      - label: Python
+      - label: Python (NumPy, SciPy, Matplotlib, Pandas)
         level: 5
-      - label: Machine Learning
-        level: 5
-      - label: Cloud Computing
+      - label: MATLAB & Mathematica
         level: 4
-  - name: Research & Communication
+      - label: C++ / Haskell
+        level: 3
+  - name: Tools & Systems
     items:
-      - label: Academic Writing
+      - label: Linux (daily-driver Arch)
         level: 5
-      - label: Conference Presentations
-        level: 4
-      - label: Grant Proposals
+      - label: LaTeX & typesetting
+        level: 5
+      - label: Web servers & site administration
         level: 4
 
 languages:
   - name: English
     level: 5
     label: Native
-  - name: Spanish
-    level: 4
-    label: Fluent
 
 awards:
-  - title: Best Paper Award
-    awarder: NeurIPS
-    date: "2022-12-01"
-    summary: Awarded for groundbreaking work on efficient training of large models.
+  - title: First Class Honours (H1) — Thesis 97%
+    awarder: Australian National University
+    date: "2025-11-01"
     icon: hero/trophy
+  - title: Dunbar Physics Honours Scholarship (Academic Merit)
+    awarder: Australian National University
+    date: "2025-01-01"
+    icon: hero/academic-cap
+  - title: ANU All-Rounder Scholarship — Tuckwell Finalist
+    awarder: Australian National University
+    date: "2022-01-01"
+    icon: hero/star

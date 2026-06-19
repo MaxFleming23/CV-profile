@@ -9,6 +9,17 @@
 # Generated site output
 public/
 
+# CV: LaTeX build artifacts + the published PDF/source (regenerated each deploy)
+cv/main.aux
+cv/main.log
+cv/main.out
+cv/main.dvi
+cv/main.pdf
+cv/*.fls
+cv/*.fdb_latexmk
+static/uploads/Max-Fleming-CV.pdf
+static/uploads/Max-Fleming-CV.tex
+
 # Hugo resources (processed assets)
 resources/
 
